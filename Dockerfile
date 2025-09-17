@@ -19,3 +19,7 @@ WORKDIR /app
 EXPOSE 8000
 
 CMD ["npm", "start"]
+
+FROM php:8.2-apache
+COPY ./public/ /var/www/html/
+EXPOSE 80
